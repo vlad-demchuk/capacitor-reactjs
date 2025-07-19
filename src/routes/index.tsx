@@ -1,39 +1,50 @@
-import { createFileRoute } from '@tanstack/react-router'
-import logo from '../logo.svg'
+import { createFileRoute, redirect } from '@tanstack/react-router'
+import { authService } from '@/features/auth/services'
 
 export const Route = createFileRoute('/')({
+  beforeLoad: async () => {
+    const user = await authService.getCurrentUser()
+
+    if (user) {
+      throw redirect({
+        to: '/dashboard',
+      })
+    }
+  },
   component: App,
 })
 
 function App() {
   return (
-    <div className="text-center">
-      <header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]">
-        <img
-          src={logo}
-          className="h-[40vmin] pointer-events-none animate-[spin_20s_linear_infinite]"
-          alt="logo"
-        />
-        <p>
-          Edit <code>src/routes/index.tsx</code> and save to reload.
+    <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          Welcome to Our App
+        </h1>
+        <p className="text-xl text-gray-600 mb-12">
+          Get started by signing in to your account or creating a new one.
         </p>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://tanstack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn TanStack
-        </a>
-      </header>
+        <div className="max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Existing Users
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Already have an account? Sign in to access your dashboard.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                New Users
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Join us today and start exploring all the features we offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
