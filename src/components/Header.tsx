@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@tanstack/react-router'
-import { useAuth } from '@/features/auth/state/contexts'
+import { useAuth } from '@/features/auth/state'
 // import { useAuth } from '../contexts/AuthContext';
 
 export const Header: React.FC = () => {

@@ -2,7 +2,7 @@ import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 import { Header } from '../components/Header'
-import { AuthProvider } from '@/features/auth/state/contexts'
+import { AuthProvider } from '@/features/auth/state'
 
 export const Route = createRootRoute({
   component: () => (

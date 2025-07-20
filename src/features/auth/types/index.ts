@@ -1,0 +1,14 @@
+import type { User } from '@/types/user.ts'
+import type { ReactNode } from 'react'
+
+export interface AuthContext {
+  user: User | null
+  isAuthenticated: boolean
+  isLoading: boolean
+  signIn: (email: string, password: string) => Promise<void>
+  signOut: () => Promise<void>
+}
+
+export interface AuthProviderProps {
+  children: ReactNode
+}

@@ -1,7 +1,7 @@
 import { createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
 import React, { useState } from 'react'
 import { authService } from '@/features/auth/services'
-import { useAuth } from '@/features/auth/state/contexts'
+import { useAuth } from '@/features/auth/state'
 
 export const Route = createFileRoute('/signin')({
   beforeLoad: async () => {
