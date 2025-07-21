@@ -1,31 +1,10 @@
-import { createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
-import { useEffect } from 'react'
-import { authService } from '@/features/auth/services'
-import { useAuth } from '@/features/auth/state'
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/dashboard')({
-  beforeLoad: async () => {
-    const user = await authService.getCurrentUser()
-
-    if (!user) {
-      throw redirect({
-        to: '/',
-      })
-    }
-  },
+export const Route = createFileRoute('/_auth/dashboard')({
   component: DashboardComponent,
 })
 
 function DashboardComponent() {
-  const { isAuthenticated } = useAuth()
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate({ to: '/' })
-    }
-  }, [isAuthenticated, navigate])
-
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="mb-8">
