@@ -13,6 +13,9 @@
     "check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/ios": "^7.4.2",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/react-router": "^1.121.2",
@@ -28,6 +31,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@capacitor/cli": "^7.4.2",
     "@tanstack/eslint-config": "^0.1.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
