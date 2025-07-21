@@ -15,16 +15,14 @@ export const Header: React.FC = () => {
     }
   }
 
-  // const isAuthenticated = true
-  // const user = {
-  //   name: 'John',
-  //   email: 'johndoe@gmail.com',
-  //   avatar: 'https://github.com/shadcn.png',
-  // }
+  if (!user || !isAuthenticated) {
+    return 'Not authenticated'
+  }
 
-  const navComponent =
-    isAuthenticated && user ? (
-      <nav className="flex justify-between items-center h-16">
+  return (
+    <header className="bg-white shadow-sm border-b">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex justify-between items-center h-16">
         <div className="flex items-center">
           <Link to="/dashboard" className="text-xl font-bold text-gray-900">
             Dashboard
@@ -52,34 +50,6 @@ export const Header: React.FC = () => {
           </button>
         </div>
       </nav>
-    ) : (
-      <nav className="flex justify-between items-center h-16">
-        <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold text-gray-900">
-            Welcome
-          </Link>
-        </div>
-        <div className="flex items-center space-x-4">
-          <Link
-            to="/signin"
-            className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/signup"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-          >
-            Sign Up
-          </Link>
-        </div>
-      </nav>
-    )
-
-  return (
-    <header className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {navComponent}
       </div>
     </header>
   )

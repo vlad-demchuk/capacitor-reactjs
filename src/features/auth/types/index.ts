@@ -10,5 +10,6 @@ export interface AuthContext {
 }
 
 export interface AuthProviderProps {
+  user: User | null
   children: ReactNode
 }

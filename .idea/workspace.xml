@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a1832-03ed-4332-b35d-3b42471e57f8" name="Changes" comment="Initialize project with basic structure and configuration files">
-      <change afterPath="$PROJECT_DIR$/src/features/auth/state/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/auth/state/provider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/auth/state/useAuth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/auth/types/index.ts" afterDir="false" />
+    <list default="true" id="5f7a1832-03ed-4332-b35d-3b42471e57f8" name="Changes" comment="Refactor authentication context structure and update imports for consistency">
+      <change afterPath="$PROJECT_DIR$/src/features/welcome/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/welcome/components/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/_auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/state/contexts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/state/context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/auth/state/provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/state/provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/auth/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routeTree.gen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routeTree.gen.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/__root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/__root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_auth.dashboard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/signin.tsx" afterDir="false" />
     </list>
@@ -82,6 +83,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project with basic structure and configuration files" />
     <MESSAGE value="Auth context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth context" />
+    <MESSAGE value="Refactor authentication context structure and update imports for consistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor authentication context structure and update imports for consistency" />
   </component>
 </project>

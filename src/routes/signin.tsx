@@ -1,7 +1,6 @@
 import { createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
 import React, { useState } from 'react'
 import { authService } from '@/features/auth/services'
-import { useAuth } from '@/features/auth/state'
 
 export const Route = createFileRoute('/signin')({
   beforeLoad: async () => {
@@ -21,7 +20,6 @@ function SignInComponent() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { signIn } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -30,7 +28,7 @@ function SignInComponent() {
     setIsLoading(true);
 
     try {
-      await signIn(email, password);
+      await authService.signIn(email, password);
       navigate({ to: '/dashboard' });
     } catch (err) {
       setError('Invalid credentials. Please try again.');
