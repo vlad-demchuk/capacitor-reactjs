@@ -1,8 +1,13 @@
-import { createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
+import {
+  createFileRoute,
+  Link,
+  redirect,
+  useNavigate,
+} from '@tanstack/react-router'
 import React, { useState } from 'react'
 import { authService } from '@/features/auth/services'
 
-export const Route = createFileRoute('/signin')({
+export const Route = createFileRoute('/(auth)/signin')({
   beforeLoad: async () => {
     const user = await authService.getCurrentUser();
 
@@ -92,9 +97,9 @@ function SignInComponent() {
 
         <p className="text-center text-sm text-gray-600 mt-4">
           Don't have an account?{' '}
-          <a href="/signup" className="text-blue-600 hover:text-blue-700">
+          <Link to="/signup" className="text-blue-600 hover:text-blue-700">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { authService } from '@/features/auth/services'
 import { AuthProvider } from '@/features/auth/state'
 import { Header } from '@/components/Header.tsx'
 
-export const Route = createFileRoute('/_auth')({
+export const Route = createFileRoute('/_authenticated')({
   beforeLoad: async () => {
     const user = await authService.getCurrentUser()
 

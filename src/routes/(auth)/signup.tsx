@@ -1,7 +1,7 @@
-import { createFileRoute, redirect } from '@tanstack/react-router'
+import { createFileRoute, Link, redirect } from '@tanstack/react-router'
 import { authService } from '@/features/auth/services'
 
-export const Route = createFileRoute('/signup')({
+export const Route = createFileRoute('/(auth)/signup')({
   beforeLoad: async () => {
     const user = await authService.getCurrentUser();
 
@@ -30,9 +30,9 @@ function SignUpComponent() {
           </p>
           <p className="text-center text-sm text-gray-600 mt-4">
             Already have an account?{' '}
-            <a href="/signin" className="text-blue-600 hover:text-blue-700">
+            <Link to="/signin" className="text-blue-600 hover:text-blue-700">
               Sign in
-            </a>
+            </Link>
           </p>
         </div>
       </div>

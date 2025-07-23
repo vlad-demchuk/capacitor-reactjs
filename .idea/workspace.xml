@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7a1832-03ed-4332-b35d-3b42471e57f8" name="Changes" comment="Refactor authentication context structure and update imports for consistency">
-      <change afterPath="$PROJECT_DIR$/src/features/welcome/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/welcome/components/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/_auth.tsx" afterDir="false" />
+    <list default="true" id="5f7a1832-03ed-4332-b35d-3b42471e57f8" name="Changes" comment="Add initial project structure and configuration files for Android and iOS">
+      <change afterPath="$PROJECT_DIR$/src/routes/_authenticated/route.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/state/provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/state/provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routeTree.gen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routeTree.gen.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/__root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/__root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_auth.dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/signin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/_auth.dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/_auth.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/signin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/signin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/signup.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +53,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes/(auth)" />
+      <recent name="$PROJECT_DIR$/src/routes/__authenticated" />
       <recent name="$PROJECT_DIR$/src/features/auth/state" />
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
@@ -84,6 +83,9 @@
     <MESSAGE value="Initialize project with basic structure and configuration files" />
     <MESSAGE value="Auth context" />
     <MESSAGE value="Refactor authentication context structure and update imports for consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor authentication context structure and update imports for consistency" />
+    <MESSAGE value="Refactor Header component and update authentication handling for improved user experience" />
+    <MESSAGE value="Refactor authentication routes and components for improved structure and access control" />
+    <MESSAGE value="Add initial project structure and configuration files for Android and iOS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial project structure and configuration files for Android and iOS" />
   </component>
 </project>
