@@ -1,4 +1,4 @@
-import type { User } from '@/types/user'
+import type { User } from '@/types/user.ts'
 
 class AuthService {
   private user: User | null = null
@@ -46,10 +46,6 @@ class AuthService {
         resolve()
       }, 100)
     })
-  }
-
-  isAuthenticated(): boolean {
-    return this.user !== null
   }
 }
 

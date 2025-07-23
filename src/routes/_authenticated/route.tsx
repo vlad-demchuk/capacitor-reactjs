@@ -1,6 +1,6 @@
 import { Outlet, createFileRoute, redirect } from '@tanstack/react-router'
-import { authService } from '@/features/auth/services'
-import { AuthProvider } from '@/features/auth/state'
+import { authService } from '@/services/auth.service.ts'
+import { UserProvider } from '@/features/user/state'
 import { Header } from '@/components/Header.tsx'
 
 export const Route = createFileRoute('/_authenticated')({
@@ -22,9 +22,9 @@ function RouteComponent() {
   const { user } = Route.useRouteContext();
 
   return (
-    <AuthProvider user={user}>
+    <UserProvider user={user}>
       <Header />
       <Outlet />
-    </AuthProvider>
+    </UserProvider>
   )
 }

@@ -7,6 +7,6 @@ count.txt
 .env
 .nitro
 .tanstack
-.idea
+.idea/workspace.xml
 .vscode
 .vite

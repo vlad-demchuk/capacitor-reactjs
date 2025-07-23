@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useEffect } from 'react'
-import { authService } from '@/features/auth/services'
+import { authService } from '@/services/auth.service.ts'
 import { Header as WelcomeHeader } from '@/features/welcome/components'
 
 export const Route = createFileRoute('/')({

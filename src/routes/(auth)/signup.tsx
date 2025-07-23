@@ -1,5 +1,5 @@
-import { createFileRoute, Link, redirect } from '@tanstack/react-router'
-import { authService } from '@/features/auth/services'
+import { Link, createFileRoute, redirect } from '@tanstack/react-router'
+import { authService } from '@/services/auth.service.ts'
 
 export const Route = createFileRoute('/(auth)/signup')({
   beforeLoad: async () => {

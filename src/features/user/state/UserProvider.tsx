@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
-import { AuthContext } from './context'
-import type { AuthProviderProps } from '@/features/auth/types'
+import { UserContext } from './UserContext.tsx'
+import type { UserProviderProps } from '@/features/user/types'
 import type { User } from '@/types/user.ts'
-import { authService } from '@/features/auth/services'
+import { authService } from '@/services/auth.service.ts'
 
-export const AuthProvider: React.FC<AuthProviderProps> = ({ user: userProp, children }) => {
+export const UserProvider: React.FC<UserProviderProps> = ({ user: userProp, children }) => {
   const [user, setUser] = useState<User | null>(userProp)
   const [isLoading] = useState(false)
   const navigate = useNavigate();
@@ -60,5 +60,5 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ user: userProp, chil
     signOut,
   }
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

@@ -1,7 +1,7 @@
 import type { User } from '@/types/user.ts'
 import type { ReactNode } from 'react'
 
-export interface AuthContext {
+export interface UserContext {
   user: User | null
   isAuthenticated: boolean
   isLoading: boolean
@@ -9,7 +9,7 @@ export interface AuthContext {
   signOut: () => Promise<void>
 }
 
-export interface AuthProviderProps {
+export interface UserProviderProps {
   user: User | null
   children: ReactNode
 }

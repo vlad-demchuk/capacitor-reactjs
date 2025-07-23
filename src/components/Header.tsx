@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from '@tanstack/react-router'
-import { useAuth } from '@/features/auth/state'
+import { useUser } from '@/features/user/state'
 // import { useAuth } from '../contexts/AuthContext';
 
 export const Header: React.FC = () => {
-  const { user, isAuthenticated, signOut } = useAuth();
+  const { user, isAuthenticated, signOut } = useUser();
 
   const handleSignOut = async () => {
     try {

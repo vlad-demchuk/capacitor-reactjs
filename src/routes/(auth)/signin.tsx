@@ -5,7 +5,7 @@ import {
   useNavigate,
 } from '@tanstack/react-router'
 import React, { useState } from 'react'
-import { authService } from '@/features/auth/services'
+import { authService } from '@/services/auth.service.ts'
 
 export const Route = createFileRoute('/(auth)/signin')({
   beforeLoad: async () => {
